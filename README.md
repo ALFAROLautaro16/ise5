@@ -1,6 +1,6 @@
 ## Especificaciones
 
-Hacer un programa en `micropython` que sirva de sistema de alerta cada vez que la temperatura indicada por un `NTC` sea superior a una de referencia. Cuando esto ocurre, un buzzer y un LED rojo deben encenderse. De lo contrario, un LED azul debe estar encendido.
+Hacer un programa en `micropython` que sirva de sistema de alerta cada vez que la temperatura indicada por un `NTC` sea superior a una de referencia. Cuando esto ocurre, un buzzer y un LED rojo deben encenderse. De lo contrario, un LED azul debe estar encendido. El programa debe imprimir periodicamente el valor de la temperatura del NTC y del pote.
 Luego, hacer un `README.md` con lo siguiente:
 
 ```markdown
