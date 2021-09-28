@@ -9,6 +9,8 @@ Luego, hacer un `README.md` con lo siguiente:
 Alumno: Nombre y apellido
 Curso: Curso
 Materia: Adquisición de Datos
+
+[link del proyecto de wokwi del .txt]
 ```
 
 ## Consideraciones
