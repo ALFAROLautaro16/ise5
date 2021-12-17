@@ -1,4 +1,5 @@
-# ise5
-Repositorio general de Instrumental y Sistemas Eléctricos (5to año), entorno de Adquisición de Datos.
-Alumno: Alfaro,Lautaro
+# LM35
+
+Alumno: Alejo Armada
 Curso: 5to 1ra avionica
+Materia: Adquisicion de Datos
