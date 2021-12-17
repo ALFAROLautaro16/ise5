@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 29,
+      "left": -97.77,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 96.57,
+      "left": -96.19,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 89.03,
+      "left": -160.86,
+      "rotate": 270,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 19.31,
+      "left": -156.54,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -65.35,
+      "left": -157.16,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 116.76,
+      "left": 155.67,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 0.67,
+      "left": 118.67,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -20.2,
+      "left": -44.77,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "ntc1:OUT", "pico:GP28", "green", [ "h-8", "v36", "h-4" ] ],
+    [ "ntc1:VCC", "pico:3V3", "red", [ "h-17", "v9" ] ],
+    [ "ntc1:GND", "pico:GND.8", "black", [ "h-30", "v-21" ] ],
+    [ "pot1:GND", "pico:GND.7", "black", [ "h-58", "v-70" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "h-65", "v3" ] ],
+    [ "led2:A", "r1:1", "green", [ "h0" ] ],
+    [ "r1:2", "pico:GP2", "green", [ "v0" ] ],
+    [ "led2:C", "pico:GND.1", "green", [ "h108" ] ],
+    [ "led1:A", "r2:1", "green", [ "h0" ] ],
+    [ "r2:2", "pico:GP8", "green", [ "v0" ] ],
+    [ "led1:C", "pico:GND.3", "green", [ "h0" ] ],
+    [ "r1:1", "bz1:2", "green", [ "v-10", "h-23" ] ],
+    [ "bz1:1", "pico:GND.1", "green", [ "v0" ] ],
+    [ "pot1:SIG", "pico:GP27", "green", [ "h-73", "v-69" ] ]
+  ]
+}
