@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": -2.67,
+      "attrs": { "env": "micropython-20210902-v1.17" }
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "imu1",
+      "top": 51.34,
+      "left": 126.67,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -14,
+      "left": -82,
+      "attrs": { "common": "cathode" }
+    },
+    { "type": "wokwi-rgb-led", "id": "rgb3", "top": -16.67, "left": -140.28, "attrs": {"common": "cathode"} }
+  ],
+  "connections": [
+    [ "imu1:VCC", "pico:3V3", "red", [ "h0" ] ],
+    [ "imu1:GND", "pico:GND.8", "black", [ "h-45", "v-30" ] ],
+    [ "imu1:SCL", "pico:GP27", "green", [ "h-44", "v22" ] ],
+    [ "imu1:SDA", "pico:GP26", "green", [ "h-36", "v18" ] ],
+    [ "rgb1:B", "pico:GP2", "blue", [ "v0" ] ],
+    [ "rgb1:G", "pico:GP3", "green", [ "v0" ] ],
+    [ "rgb1:R", "pico:GP4", "red", [ "v0" ] ],
+    [ "rgb3:COM", "pico:GND.2", "black", [ "v0" ] ],
+    [ "rgb1:COM", "pico:GND.2", "black", [ "v0" ] ],
+    [ "rgb3:B", "pico:GP6", "blue", [ "v0" ] ],
+    [ "rgb3:G", "pico:GP7", "green", [ "v0" ] ],
+    [ "rgb3:R", "pico:GP8", "red", [ "v0" ] ]
+  ]
+}
