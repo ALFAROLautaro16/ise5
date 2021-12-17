@@ -1,5 +1,5 @@
 # LM35
 
-Alumno: Alejo Armada
-Curso: 5to 1ra avionica
-Materia: Adquisicion de Datos
+Aluo: Alfaro,lautaro
+Curso: 5to 1ra avionic
+Materia: Adquisicion de Dato
